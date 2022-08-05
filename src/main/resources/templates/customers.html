@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ro" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+</head>
+<body>
+<div th:each="customer: ${customers}">
+    <p th:text="'Username: '+ ${customer.getUsername()}"></p>
+    <p th:text="'First Name: '+ ${customer.getFirstName()}"></p>
+    <p th:text="'Last Name: '+ ${customer.getLastName()}"></p>
+    <p th:text="'Phone Number: '+ ${customer.getPhone()}"></p>
+    <p th:text="'Address: '+ ${customer.getAddress()}"></p>
+    <p th:text="'City: '+ ${customer.getCity()}"></p>
+    <p th:text="'Country: '+ ${customer.getCountry()}"></p>
+    <br/>
+</div>
+</body>
+</html>
