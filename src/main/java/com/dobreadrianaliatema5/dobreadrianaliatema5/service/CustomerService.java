@@ -29,6 +29,7 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
+    //am pus CustomerDTO si nu List<CustomerDTO>, deoarece la mine username-ul este unic
     public CustomerDTO getCustomerByUsername(String username){
         List<CustomerDTO> customersDTO = new ArrayList<>();
         customersDTO = customerRepository.findAll().stream()
